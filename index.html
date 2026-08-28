@@ -1,0 +1,2070 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>For Aalo ♡</title>
+
+<style>
+
+/* =====================================================
+   GOOGLE FONTS
+===================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Pacifico&display=swap');
+
+
+/* =====================================================
+   RESET
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+
+    font-family: "DM Sans", sans-serif;
+
+    color: #fff;
+
+    background: #111;
+
+    overflow-x: hidden;
+}
+
+
+/* =====================================================
+   CURSOR
+===================================================== */
+
+body {
+    cursor: default;
+}
+
+.cursor-heart {
+
+    position: fixed;
+
+    pointer-events: none;
+
+    z-index: 99999;
+
+    font-size: 20px;
+
+    animation:
+        cursorFloat 1.2s ease-out forwards;
+}
+
+@keyframes cursorFloat {
+
+    0% {
+        opacity: 1;
+        transform:
+            translateY(0)
+            scale(1);
+    }
+
+    100% {
+        opacity: 0;
+        transform:
+            translateY(-60px)
+            scale(1.8);
+    }
+}
+
+
+/* =====================================================
+   GENERAL SECTION
+===================================================== */
+
+.page {
+
+    min-height: 100vh;
+
+    width: 100%;
+
+    position: relative;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 70px 25px;
+
+    overflow: hidden;
+}
+
+
+/* =====================================================
+   FLOATING BACKGROUND
+===================================================== */
+
+.floating {
+
+    position: absolute;
+
+    pointer-events: none;
+
+    opacity: .5;
+
+    animation:
+        floatAround 5s ease-in-out infinite;
+}
+
+@keyframes floatAround {
+
+    0%,100% {
+
+        transform:
+            translateY(0)
+            rotate(0deg);
+
+    }
+
+    50% {
+
+        transform:
+            translateY(-25px)
+            rotate(8deg);
+
+    }
+}
+
+
+/* =====================================================
+   PAGE 1
+===================================================== */
+
+.hero {
+
+    background:
+
+        radial-gradient(
+            circle at 15% 20%,
+            rgba(255,255,255,.25),
+            transparent 30%
+        ),
+
+        radial-gradient(
+            circle at 85% 70%,
+            rgba(255,255,255,.2),
+            transparent 30%
+        ),
+
+        linear-gradient(
+            135deg,
+            #15152b,
+            #30264f,
+            #8b496d,
+            #d77b91
+        );
+
+    text-align: center;
+}
+
+
+/* stars */
+
+.stars {
+
+    position: absolute;
+
+    inset: 0;
+
+    pointer-events: none;
+}
+
+.star {
+
+    position: absolute;
+
+    font-size: 25px;
+
+    animation:
+        twinkle 2s infinite alternate;
+}
+
+.star:nth-child(1) {
+    top: 10%;
+    left: 15%;
+}
+
+.star:nth-child(2) {
+    top: 20%;
+    right: 18%;
+    animation-delay: .5s;
+}
+
+.star:nth-child(3) {
+    bottom: 20%;
+    left: 20%;
+    animation-delay: 1s;
+}
+
+.star:nth-child(4) {
+    bottom: 15%;
+    right: 15%;
+    animation-delay: 1.5s;
+}
+
+@keyframes twinkle {
+
+    from {
+        opacity: .2;
+        transform: scale(.7);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1.4);
+    }
+}
+
+
+/* hero content */
+
+.hero-content {
+
+    max-width: 900px;
+
+    position: relative;
+
+    z-index: 5;
+}
+
+.hero-small {
+
+    font-family: "Pacifico", cursive;
+
+    font-size: clamp(25px,4vw,42px);
+
+    color: #ffd9e5;
+}
+
+.hero-date {
+
+    font-size: clamp(40px,8vw,85px);
+
+    font-weight: 700;
+
+    color: #ffb4cd;
+
+    margin: 15px 0;
+}
+
+.hero-line {
+
+    font-size: clamp(18px,3vw,27px);
+
+    color: #eee;
+
+    margin-bottom: 15px;
+}
+
+.hero-name {
+
+    font-size: clamp(85px,18vw,190px);
+
+    line-height: .85;
+
+    letter-spacing: 8px;
+
+    font-weight: 700;
+
+    color: transparent;
+
+    -webkit-text-stroke:
+        2px #fff;
+
+    background:
+        linear-gradient(
+            90deg,
+            #fff,
+            #ffb7d0,
+            #fff
+        );
+
+    -webkit-background-clip: text;
+
+    background-clip: text;
+
+    animation:
+        nameGlow 3s infinite alternate;
+}
+
+@keyframes nameGlow {
+
+    from {
+        filter:
+            drop-shadow(
+                0 0 5px
+                rgba(255,255,255,.2)
+            );
+    }
+
+    to {
+        filter:
+            drop-shadow(
+                0 0 25px
+                rgba(255,170,200,.8)
+            );
+    }
+}
+
+.hero-sub {
+
+    margin-top: 20px;
+
+    font-size: 18px;
+
+    color: #ddd;
+}
+
+
+/* =====================================================
+   MAIN BUTTON
+===================================================== */
+
+.main-btn {
+
+    margin-top: 40px;
+
+    padding: 17px 35px;
+
+    border: 1px solid
+        rgba(255,255,255,.3);
+
+    border-radius: 100px;
+
+    background:
+        rgba(255,255,255,.12);
+
+    backdrop-filter: blur(15px);
+
+    color: white;
+
+    font-size: 18px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: .3s;
+
+    box-shadow:
+        0 10px 40px
+        rgba(0,0,0,.25);
+}
+
+.main-btn:hover {
+
+    transform:
+        translateY(-5px)
+        scale(1.03);
+
+    background:
+        rgba(255,255,255,.22);
+
+    box-shadow:
+        0 15px 50px
+        rgba(255,150,190,.25);
+}
+
+
+/* =====================================================
+   ENVELOPE
+===================================================== */
+
+.envelope-screen {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 9999;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #171629,
+            #312544,
+            #6e405c
+        );
+
+    transition:
+        opacity .8s,
+        visibility .8s;
+}
+
+.envelope-screen.hide {
+
+    opacity: 0;
+
+    visibility: hidden;
+}
+
+.envelope-wrapper {
+
+    text-align: center;
+}
+
+.envelope {
+
+    width: 270px;
+
+    height: 180px;
+
+    position: relative;
+
+    margin: auto;
+
+    cursor: pointer;
+
+    filter:
+        drop-shadow(
+            0 25px 30px
+            rgba(0,0,0,.35)
+        );
+}
+
+.envelope-back {
+
+    position: absolute;
+
+    inset: 0;
+
+    background: #d86d8d;
+
+    border-radius: 8px;
+}
+
+.envelope-front {
+
+    position: absolute;
+
+    left: 0;
+
+    bottom: 0;
+
+    width: 0;
+
+    height: 0;
+
+    border-left:
+        135px solid transparent;
+
+    border-right:
+        135px solid transparent;
+
+    border-bottom:
+        95px solid #bd5877;
+
+    z-index: 4;
+}
+
+.envelope-flap {
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    width: 0;
+
+    height: 0;
+
+    border-left:
+        135px solid transparent;
+
+    border-right:
+        135px solid transparent;
+
+    border-top:
+        100px solid #ed8da8;
+
+    transform-origin: top;
+
+    transition: .7s;
+
+    z-index: 5;
+}
+
+.envelope.open
+.envelope-flap {
+
+    transform:
+        rotateX(180deg);
+
+}
+
+.letter {
+
+    position: absolute;
+
+    width: 200px;
+
+    height: 130px;
+
+    background: #fff7ed;
+
+    left: 35px;
+
+    top: 25px;
+
+    z-index: 2;
+
+    border-radius: 5px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    color: #8a5067;
+
+    font-family: "Pacifico";
+
+    font-size: 20px;
+
+    transition: .7s;
+}
+
+.envelope.open .letter {
+
+    transform:
+        translateY(-90px);
+
+}
+
+.envelope-text {
+
+    margin-top: 35px;
+
+    color: #fff;
+
+    font-size: 18px;
+
+}
+
+.envelope-text span {
+
+    color: #ffb3cb;
+
+}
+
+
+/* =====================================================
+   PAGE 2 — FRIENDSHIP
+===================================================== */
+
+.friendship {
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #fce9ee,
+            #fff6ed
+        );
+
+    color: #49394b;
+}
+
+.inner {
+
+    width: 100%;
+
+    max-width: 1150px;
+
+    position: relative;
+
+    z-index: 3;
+}
+
+.section-label {
+
+    text-align: center;
+
+    font-size: 14px;
+
+    letter-spacing: 5px;
+
+    text-transform: uppercase;
+
+    color: #bb6582;
+
+    margin-bottom: 15px;
+}
+
+.section-title {
+
+    text-align: center;
+
+    font-size: clamp(42px,7vw,75px);
+
+    margin-bottom: 55px;
+
+    color: #4c3a52;
+}
+
+.friend-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 70px;
+
+    align-items: center;
+}
+
+
+/* photo */
+
+.polaroid {
+
+    background: #fff;
+
+    padding: 15px 15px 30px;
+
+    box-shadow:
+        0 20px 45px
+        rgba(85,50,75,.15);
+
+    transform: rotate(-3deg);
+
+    position: relative;
+
+    transition: .4s;
+}
+
+.polaroid:hover {
+
+    transform:
+        rotate(0)
+        translateY(-10px);
+}
+
+.polaroid img {
+
+    width: 100%;
+
+    height: 430px;
+
+    object-fit: cover;
+
+    display: block;
+
+    background: #ead9df;
+}
+
+.polaroid-caption {
+
+    text-align: center;
+
+    font-family: "Pacifico";
+
+    color: #c65f81;
+
+    font-size: 22px;
+
+    padding-top: 17px;
+}
+
+
+/* text */
+
+.friend-message {
+
+    font-size: 19px;
+
+    line-height: 1.9;
+}
+
+.friend-message .highlight {
+
+    color: #c65379;
+
+    font-weight: 700;
+}
+
+
+/* =====================================================
+   PAGE 3 — MEMORIES
+===================================================== */
+
+.memories {
+
+    background:
+        linear-gradient(
+            135deg,
+            #201b36,
+            #342345,
+            #5b3550
+        );
+}
+
+.memories .section-title {
+
+    color: white;
+}
+
+.memory-intro {
+
+    color: #ddd;
+
+    text-align: center;
+
+    font-size: 19px;
+
+    margin-top: -35px;
+
+    margin-bottom: 50px;
+}
+
+.memory-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
+    gap: 25px;
+}
+
+.memory-card {
+
+    background:
+        rgba(255,255,255,.08);
+
+    border:
+        1px solid
+        rgba(255,255,255,.12);
+
+    border-radius: 25px;
+
+    overflow: hidden;
+
+    backdrop-filter: blur(15px);
+
+    transition: .4s;
+
+    box-shadow:
+        0 20px 50px
+        rgba(0,0,0,.25);
+}
+
+.memory-card:hover {
+
+    transform:
+        translateY(-10px)
+        rotate(1deg);
+
+    border-color:
+        rgba(255,180,205,.4);
+}
+
+.memory-card img {
+
+    width: 100%;
+
+    height: 300px;
+
+    object-fit: cover;
+}
+
+.memory-card-content {
+
+    padding: 22px;
+}
+
+.memory-card h3 {
+
+    color: #ffb5cc;
+
+    font-size: 22px;
+
+    margin-bottom: 8px;
+}
+
+.memory-card p {
+
+    color: #ddd;
+
+    line-height: 1.6;
+}
+
+
+/* =====================================================
+   PAGE 4 — LITTLE MESSAGE
+===================================================== */
+
+.message-page {
+
+    background:
+        #f6e8dc;
+
+    color: #49394b;
+}
+
+.letter-box {
+
+    max-width: 850px;
+
+    background:
+        rgba(255,255,255,.8);
+
+    border-radius: 25px;
+
+    padding:
+        55px;
+
+    box-shadow:
+        0 30px 70px
+        rgba(70,40,60,.15);
+
+    position: relative;
+
+    border:
+        1px solid
+        rgba(180,120,140,.2);
+}
+
+.letter-box::before {
+
+    content: "♡";
+
+    position: absolute;
+
+    top: 20px;
+
+    right: 30px;
+
+    font-size: 50px;
+
+    color: #db7797;
+}
+
+.letter-box h2 {
+
+    font-family: "Pacifico";
+
+    font-weight: 400;
+
+    font-size: 40px;
+
+    color: #bf5b7d;
+
+    margin-bottom: 30px;
+}
+
+.letter-box p {
+
+    font-size: 20px;
+
+    line-height: 2;
+}
+
+
+/* =====================================================
+   PAGE 5 — FINAL
+===================================================== */
+
+.final {
+
+    background:
+
+        radial-gradient(
+            circle at 50% 30%,
+            rgba(255,255,255,.15),
+            transparent 30%
+        ),
+
+        linear-gradient(
+            135deg,
+            #151529,
+            #32213f,
+            #783e59
+        );
+
+    text-align: center;
+}
+
+.final-content {
+
+    max-width: 900px;
+
+    position: relative;
+
+    z-index: 5;
+}
+
+.cake {
+
+    font-size: 90px;
+
+    animation:
+        cakeBounce 2s infinite;
+}
+
+@keyframes cakeBounce {
+
+    0%,100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+.final h1 {
+
+    font-size:
+        clamp(45px,8vw,90px);
+
+    margin: 25px 0;
+
+    color: #ffabc5;
+
+    text-shadow:
+        0 0 30px
+        rgba(255,150,190,.3);
+}
+
+.final p {
+
+    font-size: 21px;
+
+    line-height: 1.9;
+
+    color: #eee;
+}
+
+.final strong {
+
+    color: #ffadc6;
+}
+
+.signature {
+
+    font-family: "Pacifico";
+
+    color: #ffadc6;
+
+    font-size: 28px;
+
+    margin-top: 30px;
+}
+
+
+/* =====================================================
+   CLOSE BUTTON
+===================================================== */
+
+.close-btn {
+
+    background:
+        #e16c91;
+
+    color: white;
+
+    border: none;
+
+    padding:
+        18px 35px;
+
+    border-radius: 100px;
+
+    font-size: 18px;
+
+    cursor: pointer;
+
+    margin-top: 35px;
+
+    transition: .3s;
+}
+
+.close-btn:hover {
+
+    transform:
+        scale(1.06);
+
+    box-shadow:
+        0 15px 40px
+        rgba(225,108,145,.35);
+}
+
+
+/* =====================================================
+   MUSIC BUTTON
+===================================================== */
+
+.music-btn {
+
+    position: fixed;
+
+    right: 20px;
+
+    bottom: 20px;
+
+    z-index: 1000;
+
+    width: 55px;
+
+    height: 55px;
+
+    border-radius: 50%;
+
+    border: 1px solid
+        rgba(255,255,255,.3);
+
+    background:
+        rgba(30,20,40,.75);
+
+    backdrop-filter: blur(10px);
+
+    color: white;
+
+    cursor: pointer;
+
+    font-size: 22px;
+}
+
+
+/* =====================================================
+   CONFETTI
+===================================================== */
+
+.confetti {
+
+    position: absolute;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    overflow: hidden;
+}
+
+.confetti-piece {
+
+    position: absolute;
+
+    width: 8px;
+
+    height: 18px;
+
+    top: -30px;
+
+    animation:
+        fall linear infinite;
+
+    border-radius: 5px;
+}
+
+@keyframes fall {
+
+    0% {
+
+        transform:
+            translateY(-50px)
+            rotate(0);
+
+    }
+
+    100% {
+
+        transform:
+            translateY(110vh)
+            rotate(720deg);
+
+    }
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media(max-width: 800px) {
+
+    .friend-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+    }
+
+    .memory-grid {
+
+        grid-template-columns: 1fr;
+
+        max-width: 500px;
+
+        margin: auto;
+    }
+
+    .letter-box {
+
+        padding: 30px;
+    }
+
+    .letter-box h2 {
+
+        font-size: 32px;
+    }
+
+    .letter-box p {
+
+        font-size: 18px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     ENVELOPE OPENING
+===================================================== -->
+
+<div class="envelope-screen" id="envelopeScreen">
+
+    <div class="envelope-wrapper">
+
+        <div
+            class="envelope"
+            id="envelope"
+            onclick="openEnvelope()"
+        >
+
+            <div class="envelope-back"></div>
+
+            <div class="letter">
+                for Aalo ♡
+            </div>
+
+            <div class="envelope-front"></div>
+
+            <div class="envelope-flap"></div>
+
+        </div>
+
+        <div class="envelope-text">
+
+            You have a very important message...
+
+            <br>
+
+            <span>
+                click the envelope 👀
+            </span>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- =====================================================
+     MUSIC
+===================================================== -->
+
+<audio
+    id="music"
+    loop
+>
+
+    <source
+        src="music/birthday.mp3"
+        type="audio/mpeg"
+    >
+
+</audio>
+
+<button
+    class="music-btn"
+    onclick="toggleMusic()"
+    id="musicButton"
+>
+    🎵
+</button>
+
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section
+    class="page hero"
+    id="home"
+>
+
+    <div class="stars">
+
+        <div class="star">✦</div>
+        <div class="star">✧</div>
+        <div class="star">✦</div>
+        <div class="star">✧</div>
+
+    </div>
+
+
+    <div class="hero-content">
+
+        <div class="hero-small">
+            ohhh... wait...
+        </div>
+
+        <div class="hero-date">
+            31st August
+        </div>
+
+        <div class="hero-line">
+            there's a birthday of my BSF 😭
+        </div>
+
+        <div class="hero-name">
+            AALO
+        </div>
+
+        <div class="hero-sub">
+            aka my favourite idiot ♡
+        </div>
+
+
+        <button
+            class="main-btn"
+            onclick="goTo('friendship')"
+        >
+
+            HELLOOOO 👀
+
+            <br>
+
+            <small>
+                there's more...
+            </small>
+
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FRIENDSHIP
+===================================================== -->
+
+<section
+    class="page friendship"
+    id="friendship"
+>
+
+    <div class="inner">
+
+        <div class="section-label">
+            chapter one
+        </div>
+
+        <h1 class="section-title">
+            how did we even get here? ♡
+        </h1>
+
+
+        <div class="friend-grid">
+
+
+            <!-- PHOTO -->
+
+            <div class="polaroid">
+
+                <img
+                    src="photos/photo1.jpg"
+                    alt="Our picture"
+                >
+
+                <div class="polaroid-caption">
+                    us ♡
+                </div>
+
+            </div>
+
+
+            <!-- MESSAGE -->
+
+            <div class="friend-message">
+
+                <p>
+
+                    Dear Aalo,
+
+                    <br><br>
+
+                    I honestly don't know at what point you
+                    went from being just another person to
+                    becoming one of the most important people
+                    in my life.
+
+                    <br><br>
+
+                    Somehow we went from random conversations
+                    to <span class="highlight">
+                    sharing everything</span>.
+
+                    From stupid jokes nobody else understands
+                    to conversations that actually matter.
+
+                    <br><br>
+
+                    You've seen my chaotic side,
+                    my dramatic side,
+                    my annoying side...
+
+                    and somehow you're still here. 😭
+
+                    <br><br>
+
+                    So thank you.
+
+                    For every laugh.
+
+                    Every stupid memory.
+
+                    Every random conversation.
+
+                    Every time you were there.
+
+                    <br><br>
+
+                    You're genuinely one of those people
+                    I never want to lose.
+
+                    <br><br>
+
+                    <span class="highlight">
+                    You're stuck with me now. Sorry. ♡
+                    </span>
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div style="text-align:center">
+
+            <button
+                class="main-btn"
+                onclick="goTo('memories')"
+            >
+
+                WAIT...
+
+                <br>
+
+                I HAVE MORE 📸
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     MEMORIES
+===================================================== -->
+
+<section
+    class="page memories"
+    id="memories"
+>
+
+    <div class="inner">
+
+        <div class="section-label"
+             style="color:#ffabc5">
+
+            chapter two
+
+        </div>
+
+        <h1 class="section-title">
+
+            evidence of our stupidity 📸
+
+        </h1>
+
+        <p class="memory-intro">
+
+            unfortunately, there is photographic evidence.
+
+        </p>
+
+
+        <div class="memory-grid">
+
+
+            <!-- MEMORY 1 -->
+
+            <div class="memory-card">
+
+                <img
+                    src="photos/photo2.jpg"
+                    alt="Memory"
+                >
+
+                <div class="memory-card-content">
+
+                    <h3>
+                        the chaos
+                    </h3>
+
+                    <p>
+                        Normal people make memories.
+                        We apparently make problems.
+                        😂
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- MEMORY 2 -->
+
+            <div class="memory-card">
+
+                <img
+                    src="photos/photo3.jpg"
+                    alt="Memory"
+                >
+
+                <div class="memory-card-content">
+
+                    <h3>
+                        the good times
+                    </h3>
+
+                    <p>
+                        Some moments are completely
+                        ordinary until you realize
+                        you'll remember them forever.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- MEMORY 3 -->
+
+            <div class="memory-card">
+
+                <img
+                    src="photos/photo4.jpg"
+                    alt="Memory"
+                >
+
+                <div class="memory-card-content">
+
+                    <h3>
+                        us being us
+                    </h3>
+
+                    <p>
+                        No explanation required.
+                        You just had to be there. ♡
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div style="text-align:center">
+
+            <button
+                class="main-btn"
+                onclick="goTo('letter')"
+            >
+
+                okay...
+
+                <br>
+
+                one serious thing 💌
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     LETTER
+===================================================== -->
+
+<section
+    class="page message-page"
+    id="letter"
+>
+
+    <div class="inner">
+
+        <div class="letter-box">
+
+            <h2>
+                okay, no jokes now...
+            </h2>
+
+            <p>
+
+                Aalo,
+
+                <br><br>
+
+                I hope you know that behind all the
+                stupid jokes and constant teasing,
+                I genuinely appreciate having you
+                in my life.
+
+                <br><br>
+
+                There are so many people we meet
+                throughout life, but only a few become
+                the kind of people whose presence
+                actually feels like home.
+
+                <br><br>
+
+                You're one of those people for me.
+
+                <br><br>
+
+                I hope you achieve everything you want.
+
+                I hope you meet people who appreciate
+                you as much as you deserve.
+
+                I hope you laugh until your stomach hurts.
+
+                I hope you have days you'll never want
+                to forget.
+
+                <br><br>
+
+                And whenever life gets difficult,
+                I hope you remember that you've got
+                someone in your corner.
+
+                <br><br>
+
+                Me.
+
+                Obviously.
+
+                Unfortunately.
+
+                You're not getting rid of me. 😭
+
+                <br><br>
+
+                Happy Birthday, Aalo.
+
+                <br>
+
+                <strong>
+                    I'm really, really glad you're my BSF. ♡
+                </strong>
+
+            </p>
+
+
+            <div style="text-align:center">
+
+                <button
+                    class="main-btn"
+                    onclick="goTo('final')"
+                >
+
+                    LAST PAGE...
+
+                    👀
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FINAL
+===================================================== -->
+
+<section
+    class="page final"
+    id="final"
+>
+
+    <div
+        class="confetti"
+        id="confetti"
+    ></div>
+
+
+    <div class="final-content">
+
+        <div class="cake">
+            🎂
+        </div>
+
+
+        <h1>
+            HAPPY BIRTHDAY AALO ♡
+        </h1>
+
+
+        <p>
+
+            31st August isn't just another day anymore.
+
+            <br>
+
+            It's the day the world decided
+            to give me one of my favourite idiots.
+
+            😂
+
+            <br><br>
+
+            I hope your year is filled with
+            happiness, success, good health,
+            crazy adventures and a ridiculous
+            amount of cake.
+
+            <br><br>
+
+            Never change the person you are.
+
+            <br><br>
+
+            And remember...
+
+            <br>
+
+            <strong>
+                YOU ARE VERY LOVED.
+            </strong>
+
+        </p>
+
+
+        <div class="signature">
+
+            forever your annoying bestie ♡
+
+        </div>
+
+
+        <button
+            class="close-btn"
+            onclick="closeWebsite()"
+        >
+
+            JUST CLOSE THE WEBSITE ♡
+
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<script>
+
+
+/* =====================================================
+   ENVELOPE
+===================================================== */
+
+function openEnvelope() {
+
+    const envelope =
+        document.getElementById("envelope");
+
+    const screen =
+        document.getElementById("envelopeScreen");
+
+    envelope.classList.add("open");
+
+
+    setTimeout(() => {
+
+        screen.classList.add("hide");
+
+        startMusic();
+
+    }, 900);
+
+}
+
+
+
+/* =====================================================
+   NAVIGATION
+===================================================== */
+
+function goTo(id) {
+
+    document
+        .getElementById(id)
+        .scrollIntoView({
+            behavior: "smooth"
+        });
+
+}
+
+
+
+/* =====================================================
+   MUSIC
+===================================================== */
+
+const music =
+    document.getElementById("music");
+
+const musicButton =
+    document.getElementById("musicButton");
+
+let musicPlaying = false;
+
+
+function startMusic() {
+
+    music.volume = 0.35;
+
+    music.play()
+        .then(() => {
+
+            musicPlaying = true;
+
+            musicButton.innerHTML = "🔊";
+
+        })
+        .catch(() => {
+
+            /*
+              Browser may block autoplay.
+              User can press the music button.
+            */
+
+        });
+
+}
+
+
+function toggleMusic() {
+
+    if(musicPlaying) {
+
+        music.pause();
+
+        musicPlaying = false;
+
+        musicButton.innerHTML = "🎵";
+
+    }
+
+    else {
+
+        music.play();
+
+        musicPlaying = true;
+
+        musicButton.innerHTML = "🔊";
+
+    }
+
+}
+
+
+
+/* =====================================================
+   MOUSE HEARTS
+===================================================== */
+
+let lastHeart = 0;
+
+document.addEventListener(
+    "mousemove",
+    function(e) {
+
+        const now = Date.now();
+
+        if(now - lastHeart < 120) {
+            return;
+        }
+
+        lastHeart = now;
+
+
+        const heart =
+            document.createElement("div");
+
+        heart.className =
+            "cursor-heart";
+
+
+        heart.innerHTML =
+            Math.random() > .5
+            ? "♡"
+            : "✦";
+
+
+        heart.style.left =
+            e.clientX + "px";
+
+        heart.style.top =
+            e.clientY + "px";
+
+
+        heart.style.color =
+            Math.random() > .5
+            ? "#ff9fbd"
+            : "#d7b6ff";
+
+
+        document.body
+            .appendChild(heart);
+
+
+        setTimeout(() => {
+
+            heart.remove();
+
+        }, 1200);
+
+    }
+);
+
+
+
+/* =====================================================
+   CONFETTI
+===================================================== */
+
+const confetti =
+    document.getElementById("confetti");
+
+
+const colors = [
+
+    "#ffabc5",
+    "#ffd77a",
+    "#c6b2ff",
+    "#ffffff",
+    "#8edbd1"
+
+];
+
+
+for(let i = 0; i < 90; i++) {
+
+    const piece =
+        document.createElement("div");
+
+    piece.className =
+        "confetti-piece";
+
+
+    piece.style.left =
+        Math.random() * 100 + "%";
+
+
+    piece.style.background =
+        colors[
+            Math.floor(
+                Math.random() * colors.length
+            )
+        ];
+
+
+    piece.style.animationDuration =
+        (2 + Math.random() * 4) + "s";
+
+
+    piece.style.animationDelay =
+        Math.random() * 5 + "s";
+
+
+    piece.style.transform =
+        `rotate(
+            ${Math.random() * 180}deg
+        )`;
+
+
+    confetti.appendChild(piece);
+
+}
+
+
+
+/* =====================================================
+   CLOSE WEBSITE
+===================================================== */
+
+function closeWebsite() {
+
+    /*
+       Try to close the browser tab.
+    */
+
+    window.close();
+
+
+    /*
+       If Chrome doesn't allow the tab to close,
+       show a final goodbye instead.
+    */
+
+    setTimeout(() => {
+
+        document.body.innerHTML = `
+
+            <div style="
+
+                min-height:100vh;
+
+                display:flex;
+
+                justify-content:center;
+
+                align-items:center;
+
+                text-align:center;
+
+                padding:30px;
+
+                background:
+                linear-gradient(
+                    135deg,
+                    #151529,
+                    #32213f,
+                    #783e59
+                );
+
+                color:white;
+
+                font-family:Arial,sans-serif;
+
+            ">
+
+                <div>
+
+                    <div style="
+                        font-size:90px;
+                        margin-bottom:20px;
+                    ">
+                        🎀
+                    </div>
+
+
+                    <h1 style="
+                        font-size:50px;
+                        color:#ffabc5;
+                    ">
+
+                        BYEEEE AALO 😭
+
+                    </h1>
+
+
+                    <p style="
+                        font-size:23px;
+                        margin-top:20px;
+                    ">
+
+                        Now go enjoy your birthday,
+                        idiot. ♡
+
+                    </p>
+
+
+                    <p style="
+                        margin-top:30px;
+                        opacity:.6;
+                    ">
+
+                        End of transmission.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        `;
+
+    }, 400);
+
+}
+
+
+</script>
+
+</body>
+
+</html> 
